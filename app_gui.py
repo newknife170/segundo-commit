@@ -2,15 +2,21 @@
 Programa para descargar videos youtube - GUI
 '''
 
+from paquetededoritos.widgets import crear_widgets
 import os
 import threading
-import tkinter as tk
-import ttkbootstrap as ttk
 from pytubefix import YouTube
-from ttkbootstrap.constants import PRIMARY, SUCCESS, DANGER
+from paquetededoritos.windows import ventanaprincipal
 
 def main() -> None:
-    pass
+    config = {
+        'tema': 'morph',
+        'titulo': 'Aplicacion para descargar videos del yutu',
+        'tamaño': '800x600',
+    }
+    win = ventanaprincipal(config)
+    crear_widgets(win)
+    win.mainloop()
 
 if __name__ == '__main__':
     main()
